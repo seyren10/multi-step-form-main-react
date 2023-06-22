@@ -1,0 +1,25 @@
+.thank-you {
+  max-width: 50ch;
+  min-height: 20rem;
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+  height: 100%;
+  place-content: center;
+}
+
+@media (max-width: 35em) {
+  .thank-you img {
+    max-width: 20%;
+  }
+}
+.thank-you h1 {
+  color: var(--clr-primary-600);
+  font-size: 2rem;
+  margin-block: 0.7rem;
+}
+
+.thank-you p {
+ text-align: center;
+ line-height: 1.5;
+}

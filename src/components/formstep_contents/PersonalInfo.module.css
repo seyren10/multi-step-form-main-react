@@ -1,0 +1,40 @@
+.personal-info h1 {
+  color: var(--clr-primary-600);
+  font-size: 2rem;
+  margin-block: 0.7rem;
+}
+
+.personal-info p {
+  margin-block-end: 0.5rem;
+}
+
+.form-group {
+  display: grid;
+  gap: 0.3rem;
+
+  margin-block-start: var(--spacer-600);
+}
+
+@media (max-width: 35em) {
+  .form-group {
+    margin-block-start: var(--spacer-300);
+  }
+}
+
+.form-group label {
+  color: var(--clr-primary-600);
+  font-weight: 500;
+  font-size: .9rem;
+}
+
+.form-group input {
+  padding: 0.8rem;
+  border: 1px solid var(--clr-neutral-400);
+  border-radius: var(--_br-size-300);
+}
+
+.form-group ::placeholder {
+  color: var(--clr-neutral-500);
+  font-family: var(--ff-default);
+  font-weight: 700;
+}

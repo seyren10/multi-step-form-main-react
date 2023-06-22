@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+:root {
+  /* PRIMARY COLORS */
+  --clr-primary-600: hsl(213, 96%, 18%);
+  --clr-primary-400: hsl(243, 100%, 62%);
+  --clr-primary-300: hsl(228, 100%, 84%);
+  --clr-primary-200: hsl(206, 94%, 87%);
+  --clr-accent-400: hsl(354, 84%, 57%);
+
+  /* NEUTRAL COLORS */
+  --clr-neutral-500: hsl(231, 11%, 63%);
+  --clr-neutral-400: hsl(229, 24%, 87%);
+  --clr-neutral-300: hsl(217, 100%, 97%);
+  --clr-neutral-200: hsl(231, 100%, 99%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+
+  --clr-background: hsl(215, 81%, 96%);
+
+  --ff-default: "Ubuntu", sans-serif;
+
+  --spacer-200: 0.5rem;
+  --spacer-300: 0.75rem;
+  --spacer-400: 1rem;
+  --spacer-500: 1.5rem;
+  --spacer-600: 1.75rem;
+  --spacer-700: 2rem;
+}
+
+/* CSS RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  color: inherit;
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  font-size: inherit;
+}
+
+input {
+  font-family: var(--ff-default);
+  color: var(--clr-primary-600);
+  font-weight: 500;
+  font-size: 1rem;
+  outline: none;
+}
+input:where(:focus, :hover) {
+  border: 1px solid var(--clr-primary-400) !important;
+}
+
+img,
+video,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+label {
+  cursor: pointer;
+}
+
+/* GLOBAL STYLING */
+
+body {
+  font-family: var(--ff-default);
+  background-color: var(--clr-background);
+  color: var(--clr-neutral-500);
+}
+body *:not(h1, h2, h3, h4, h5) {
+  font-size: clamp(0.5rem, 3vw + 0.1rem, 1rem) !important;
+}
+
+h1 {
+  font-size: clamp(1rem, 2.5vw + 1rem, 2rem) !important;
+}
+.form-group__label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-group__error {
+  border: 1px solid var(--clr-accent-400) !important;
+}
+
+.error-text {
+  color: var(--clr-accent-400);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.text-title {
+  text-transform: capitalize;
+}

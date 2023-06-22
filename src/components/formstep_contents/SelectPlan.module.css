@@ -1,0 +1,128 @@
+.select-plan h1 {
+  color: var(--clr-primary-600);
+  font-size: 2rem;
+  margin-block: 0.7rem;
+}
+
+.select-plan p {
+  margin-block-end: 0.5rem;
+}
+
+.plan-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+
+  margin-block-start: var(--spacer-700);
+}
+
+.plan-list__item {
+  border: 1px solid var(--clr-neutral-400);
+  border-radius: var(--_br-size-300);
+  padding: 1rem;
+  display: grid;
+
+  width: min(10vw + 1rem, 8rem);
+  cursor: pointer;
+}
+
+.plan-list__item:hover {
+  border-color: var(--clr-primary-400);
+}
+
+.plan-list__item.active-plan {
+  background-color: var(--clr-neutral-300);
+  border-color: var(--clr-primary-400);
+}
+.plan-list__item img {
+  max-width: 2rem;
+}
+
+.item__detail {
+  margin-block-start: 2.5rem;
+  display: grid;
+  gap: 0.3rem;
+}
+
+@media (max-width: 35em) {
+  .plan-list {
+    grid-template-columns: 1fr;
+    margin-block-start: var(--spacer-500);
+  }
+  .plan-list__item {
+    gap: 1rem;
+    grid-template-columns: min-content 1fr;
+    align-items: center;
+    width: auto;
+  }
+  .item__detail {
+    margin: 0;
+  }
+}
+
+.item__detail > span:first-child {
+  color: var(--clr-primary-600);
+  font-weight: 500;
+}
+
+.item__detail > span:nth-child(2) {
+  font-size: 0.9rem;
+}
+.item__detail > span:nth-child(3) {
+  color: var(--clr-primary-600);
+  font-size: 0.8rem;
+  animation: fade-in 500ms ease-in-out;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.plan-type {
+  margin-block-start: 1.5rem;
+  background-color: var(--clr-neutral-300);
+
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+  padding-block: 0.6rem;
+  border-radius: var(--_br-size-300);
+}
+
+.plan-toggle {
+  background-color: var(--clr-primary-600);
+  width: 2.5rem;
+  padding-block: 0.6rem;
+  border-radius: 100vw;
+  position: relative;
+}
+
+.plan-toggle::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  width: 0.8rem;
+  aspect-ratio: 1;
+  border-radius: 100vw;
+  background-color: white;
+
+  transition: left 250ms ease-in-out;
+}
+.plan-toggle input[type="checkbox"] {
+  display: none;
+  margin: 0;
+  width: 0.7rem;
+  height: 0.7rem;
+}
+.plan-toggle:has(input[type="checkbox"]:checked)::after {
+  left: 60%;
+}
